@@ -75,7 +75,7 @@ module.exports = {
       }
       next();
     },
-    passport.authenticate("discord"),{scope:scopes,prompt:'none'}
+    passport.authenticate("discord"),{scope:client.scopes,prompt:'none'}
   );
 
   app.get(
