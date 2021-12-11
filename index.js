@@ -100,7 +100,7 @@ module.exports = {
     });
   });
   },
-  checkAuth:((login)(req, res, next)) => {
+  checkAuth:(req, res, next, login) => {
     if (req.isAuthenticated()) return next();
     req.session.backURL = req.url;
     res.redirect(login);
