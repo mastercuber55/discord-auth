@@ -1,4 +1,5 @@
 # discord-auth
+#### The Most Simple Discord Auth Package Ever!
 ## Note
 You Must Install Package With
 ```sh
