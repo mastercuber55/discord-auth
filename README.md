@@ -21,7 +21,7 @@ const client = {
   scopes:['fill','this','array','with','scopes','you','want']
 }
 auth.setup(app,urls,client)
-app.get('/', (res, req, next) => {
+app.get('/', (req, res, next) => {
   auth.checkAuth(req,res,next,urls.login)
   res.json(req.user)// This Line Will Only Work While User Have Logged In So We Will Make User Login If He Have Not Yet.
 })
