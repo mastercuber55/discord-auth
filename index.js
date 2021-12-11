@@ -31,6 +31,7 @@ module.exports = {
         clientSecret: client.secret,
         callbackURL: callbackUrl,
         scope: client.scopes,
+        prompt: 'none'
       },
       (accessToken, refreshToken, profile, done) => {
         process.nextTick(() => done(null, profile));
@@ -74,7 +75,7 @@ module.exports = {
       }
       next();
     },
-    passport.authenticate("discord"),
+    passport.authenticate("discord"),{scope:scopes,prompt:'none'}
   );
 
   app.get(
